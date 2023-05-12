@@ -16,13 +16,17 @@ int Posible(Cruces *C1, Cruces *C2,C_incompatible *L){
 
 int asigna(Cruces *L1, C_incompatible *L2, Turnos *L3){
     Cruces *p=L1;
-    C_incompatible *q;
+    Cruces *q;
     char turno= "A"-1;
+    if(!L3)
+        /*debe de haber una funcion que asigne el primer elemento de
+        la lista a L3, para asi ir comparando ese con el primero en L1*/
     while (!p){
         q=p->next;
         turno++;
         while(!q){
-
+            if(Posible(p,q,L2))
+                L3=FinalTurnos(L3,CrearTurno(q->Cruce,turno));
         }
     }
 }
