@@ -20,7 +20,9 @@ int asigna(Cruces *L1, C_incompatible *L2, Turnos *L3){
     char turno= "A"-1;
     if(!L3)
         /*debe de haber una funcion que asigne el primer elemento de
-        la lista a L3, para asi ir comparando ese con el primero en L1*/
+        la lista a L3, para asi ir comparando ese con el primero en L1
+        OJO si se hace esta modificacion es necesario modificar en POSIBLE
+        Para que reciba el primero de la lista L3*/
     while (!p){
         q=p->next;
         turno++;
