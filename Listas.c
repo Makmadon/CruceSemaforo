@@ -34,7 +34,9 @@ Cruces *FinalCruces(Cruces* lista, Cruces *newp){
     if(lista==NULL)
         return newp;
     Cruces *p=lista;
-    for (;p->next!=NULL;p=p->next)
+    while(p){
+    p=p->next;
+    }
     p->next=newp;
     return lista;
 }
@@ -43,7 +45,10 @@ Cruces *FinalCruces(Cruces* lista, Cruces *newp){
 C_incompatible *Final_incompatible(C_incompatible *lista, C_incompatible *newp){
     if(lista==NULL)
         return newp;
-    for(C_incompatible *p=lista; p->next!=NULL; p=p->next)
+    C_incompatibles *p=lista;
+    while(p){
+    p=p->next;
+    }
     p->next=newp;
     return lista;
 }
@@ -52,7 +57,10 @@ C_incompatible *Final_incompatible(C_incompatible *lista, C_incompatible *newp){
 Turnos *FinalTurnos(Turnos *lista, Turnos *newp){
     if(lista==NULL)
         return newp;
-    for(Turnos *p=lista; p->next!=NULL; p=p->next)
+    Turnos *p=lista;
+    while(p){
+    p=p->next;
+    }
     p->next=newp;
     return lista;
 }
